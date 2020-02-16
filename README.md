@@ -1,6 +1,6 @@
 # gdyndns
 
-https://github.com/jvanderaa/gdyndns/workflows/CI/badge.svg
+![](https://github.com/jvanderaa/gdyndns/workflows/CI/badge.svg)
 
 Google Domains has a REST API that allows you to use Dynamic DNS updates. This is based on the
 information based on the Google DNS page:  
