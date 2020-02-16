@@ -20,12 +20,12 @@ https://support.google.com/domains/answer/6147083?hl=en
 
 ### Settings Required
 
-GDYNDNS_IP_ADDRESS_URL: URL to get your IP address from, built with http://ifconfig.me
-GDYNDNS_GOOGLE_DOMAIN: Your Google Domain, without any www. or http or anything else. Just domain.google
-GDYNDNS_USERNAME: Username as created on the Google Domains page
-GDYNDNS_PASSWORD: Password for Google Domains as created on the Google Domains page
-GDYNDNS_SUB_DOMAIN: The DNS entry that you wish to use, this **must** be created before starting the container
-GDYNDNS_SLEEP_TIMER: Time in seconds to sleep before checking to see if an update is needed
+GDYNDNS_IP_ADDRESS_URL: URL to get your IP address from, built with http://ifconfig.me  
+GDYNDNS_GOOGLE_DOMAIN: Your Google Domain, without any www. or http or anything else. Just domain.google  
+GDYNDNS_USERNAME: Username as created on the Google Domains page  
+GDYNDNS_PASSWORD: Password for Google Domains as created on the Google Domains page  
+GDYNDNS_SUB_DOMAIN: The DNS entry that you wish to use, this **must** be created before starting the container  
+GDYNDNS_SLEEP_TIMER: Time in seconds to sleep before checking to see if an update is needed  
 
 ### Example Settings File
 
