@@ -1,6 +1,9 @@
 #! /usr/local/bin/python
 """
 Python application to update Google Dynamic DNS entry, IPv4 only at this time
+
+Author: Josh VanDeraa
+Date: 2020-02-16
 """
 import os
 import sys
