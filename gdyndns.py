@@ -8,14 +8,19 @@ from time import sleep
 import socket
 import requests
 
-SLEEP_TIMER = int(os.environ["GDYNDNS_SLEEP_TIMER"])
-if SLEEP_TIMER < 300:
-    SLEEP_TIMER = 300
-IP_ADDRESS_URL = os.environ["GDYNDNS_IP_ADDRESS_URL"]
-GOOGLE_DOMAIN = os.environ["GDYNDNS_GOOGLE_DOMAIN"]
-SUB_DOMAIN = os.environ["GDYNDNS_SUB_DOMAIN"]
-USERNAME = os.environ["GDYNDNS_USERNAME"]
-PASSWORD = os.environ["GDYNDNS_PASSWORD"]
+try:
+    SLEEP_TIMER = int(os.environ["GDYNDNS_SLEEP_TIMER"])
+    if SLEEP_TIMER < 300:
+        SLEEP_TIMER = 300
+    IP_ADDRESS_URL = os.environ["GDYNDNS_IP_ADDRESS_URL"]
+    GOOGLE_DOMAIN = os.environ["GDYNDNS_GOOGLE_DOMAIN"]
+    SUB_DOMAIN = os.environ["GDYNDNS_SUB_DOMAIN"]
+    USERNAME = os.environ["GDYNDNS_USERNAME"]
+    PASSWORD = os.environ["GDYNDNS_PASSWORD"]
+except KeyError:
+    print(f"Exception in loading required environmental variables.")
+    print(f"Verify you have created the proper settings.env file.")
+    sys.exit(1)
 
 
 class NetworkIp:

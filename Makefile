@@ -1,5 +1,5 @@
 IMG_NAME=jvanderaa/gdyndns
-IMG_VERSION=0.0.5
+IMG_VERSION=0.0.6
 .DEFAULT_GOAL := test
 
 .PHONY: build
@@ -28,9 +28,11 @@ test:	lint unit
 .PHONY: lint
 lint:
 	@echo "Starting  lint"
+	docker run -v $(shell pwd):/local $(IMG_NAME):$(IMG_VERSION) sort --check requirements.txt
 	docker run -v $(shell pwd):/local $(IMG_NAME):$(IMG_VERSION) black --check .
 	docker run -v $(shell pwd):/local $(IMG_NAME):$(IMG_VERSION) make pylint
 	docker run -v $(shell pwd):/local $(IMG_NAME):$(IMG_VERSION) bandit --recursive --config .bandit.yml .
+	docker run -v $(shell pwd):/local $(IMG_NAME):$(IMG_VERSION) yamllint --strict .
 	@echo "Completed lint"
 
 .PHONY: unit
