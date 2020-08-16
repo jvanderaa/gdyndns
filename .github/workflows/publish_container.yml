@@ -18,3 +18,4 @@ jobs:
           registry: docker.pkg.github.com
           repository: jvanderaa/gdyndns/gdyndns
           tag_with_ref: true
+          tags: latest
