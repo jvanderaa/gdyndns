@@ -21,8 +21,8 @@ try:
     USERNAME = os.environ["GDYNDNS_USERNAME"]
     PASSWORD = os.environ["GDYNDNS_PASSWORD"]
 except KeyError:
-    print(f"Exception in loading required environmental variables.")
-    print(f"Verify you have created the proper settings.env file.")
+    print("Exception in loading required environmental variables.")
+    print("Verify you have created the proper settings.env file.")
     sys.exit(1)
 
 
@@ -65,7 +65,7 @@ class NetworkIp:
             return socket.gethostbyname(f"{SUB_DOMAIN}.{GOOGLE_DOMAIN}")
         except socket.error:
             print(f"Failed to find {SUB_DOMAIN}.{GOOGLE_DOMAIN}")
-            print(f"Please verify that the sub domain is setup first on your Google Domain")
+            print("Please verify that the sub domain is setup first on your Google Domain")
             sys.exit(1)
 
 
