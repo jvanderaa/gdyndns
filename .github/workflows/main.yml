@@ -17,13 +17,3 @@ jobs:
         run: make build
       - name: Linting
         run: make lint
-      - name: Check out the repo
-        uses: actions/checkout@v2
-      - name: Push to GitHub Packages
-        uses: docker/build-push-action@v1
-        with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: jvanderaa/gdyndns/gdyndns
-          tag_with_ref: true

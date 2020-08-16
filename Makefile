@@ -1,5 +1,5 @@
 IMG_NAME=jvanderaa/gdyndns
-IMG_VERSION=0.0.6
+IMG_VERSION=0.1.0
 .DEFAULT_GOAL := test
 
 .PHONY: build
