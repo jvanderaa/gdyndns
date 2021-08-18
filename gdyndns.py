@@ -12,9 +12,7 @@ import socket
 import requests
 
 try:
-    SLEEP_TIMER = int(os.environ["GDYNDNS_SLEEP_TIMER"])
-    if SLEEP_TIMER < 300:
-        SLEEP_TIMER = 300
+    SLEEP_TIMER = max(int(os.environ["GDYNDNS_SLEEP_TIMER"]), 300)
     IP_ADDRESS_URL = os.environ["GDYNDNS_IP_ADDRESS_URL"]
     GOOGLE_DOMAIN = os.environ["GDYNDNS_GOOGLE_DOMAIN"]
     SUB_DOMAIN = os.environ["GDYNDNS_SUB_DOMAIN"]
