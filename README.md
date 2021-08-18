@@ -36,8 +36,8 @@ An example settings file should look like the following:
 ```bash
 GDYNDNS_IP_ADDRESS_URL=http://ifconfig.me
 GDYNDNS_GOOGLE_DOMAIN=example.com
-GDYNDNS_USERNAME=aROTvffJ9
-GDYNDNS_PASSWORD=z0HlTqiwMTpzCND2
+GDYNDNS_USERNAME=aROTvffxx
+GDYNDNS_PASSWORD=z0HlTqiwMTnasdfa
 GDYNDNS_SUB_DOMAIN=dynamicdns
 GDYNDNS_SLEEP_TIMER=300
 ```
