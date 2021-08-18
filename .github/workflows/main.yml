@@ -19,7 +19,7 @@ jobs:
       - name: "Install Python Packages for Linting"
         run: "pip install --upgrade pip wheel black"
       - name: "Linting: Black"
-        run: "black . -c"
+        run: "black . --check"
   bandit:
     runs-on: ubuntu-20.04
     steps:
@@ -32,7 +32,7 @@ jobs:
       - name: "Install Python Packages for Linting"
         run: "pip install --upgrade pip wheel bandit"
       - name: "Linting: Bandit"
-        run: "bandit"
+        run: "bandit --recursive ./ --configfile .bandit.yml"
   build:
     runs-on: ubuntu-latest
     steps:
