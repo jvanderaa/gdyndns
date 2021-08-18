@@ -7,10 +7,34 @@ on:
       - master
 
 jobs:
+  lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Set up Python"
+        uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.9"
+      - name: "Install Python Packages for Linting"
+        run: "pip install --upgrade pip wheel black"
+      - name: "Linting: Black"
+        run: "black . -c"
+  bandit:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Set up Python"
+        uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.9"
+      - name: "Install Python Packages for Linting"
+        run: "pip install --upgrade pip wheel bandit"
+      - name: "Linting: Bandit"
+        run: "bandit"
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Build Container
